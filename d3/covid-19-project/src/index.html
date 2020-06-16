@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19 Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quattrocento+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="dash-header">
+        <h1>COVID-19 Dashboard</h1>
+        <p>
+            Choose between one of the data types.
+            <input type="radio" name="case-type" value="confirmed" checked>
+            <label>Confirmed</label>
+            <input type="radio" name="case-type" value="deaths">
+            <label>Deaths</label>
+            <input type="radio" name="case-type" value="recoveries">
+            <label>Recoveries</label>
+        </p>
+        <p>
+            Explore the total number cases in different dates. 
+            Date: <span id="selected-date"></span>
+            <input id="dateRange" type="range" step="1">
+        </p>
+    </div>
+    <section class="dash-container">
+        <div class="chart-container">
+            <svg class="chart"
+                version="1.1"
+                baseProfile="full"
+                xmlns="http://www.w3.org/2000/svg"
+                id="world-map">
+            </svg>
+        </div>
+        <div class="chart-container">
+            <svg class="chart"
+                version="1.1"
+                baseProfile="full"
+                xmlns="http://www.w3.org/2000/svg"
+                id="cases-evolution-over-time-bar-chart">
+            </svg>
+        </div>
+    </section>
+    <div class="tooltip"></div>
+    <script src="https://d3js.org/d3.v5.js"></script>
+    <script src="https://unpkg.com/topojson@3"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/ui-components.js"></script>
+    <script src="js/total-cases-chart.js"></script>
+    <script src="js/total-cases-evolution-chart.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
