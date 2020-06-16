@@ -1,0 +1,16 @@
+{
+  "name": "covid-19-project",
+  "version": "1.0.0",
+  "description": "Simple D3 based COVID-19 Dashboard",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "ecarrara-araujo",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.4"
+  }
+}
